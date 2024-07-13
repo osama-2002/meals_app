@@ -18,8 +18,8 @@ class CategoriesScreen extends StatefulWidget {
   State<CategoriesScreen> createState() => _CategoriesScreenState();
 }
 
-class _CategoriesScreenState extends State<CategoriesScreen> with SingleTickerProviderStateMixin {
-
+class _CategoriesScreenState extends State<CategoriesScreen>
+    with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
 
   @override
@@ -79,10 +79,13 @@ class _CategoriesScreenState extends State<CategoriesScreen> with SingleTickerPr
         ],
       ),
       builder: (context, child) {
-        return SlideTransition(position: _animationController.drive(Tween(
-          begin: const Offset(0, 0.3),
-          end: const Offset(0, 0),
-        )), child: child,);
+        return SlideTransition(
+          position: _animationController.drive(Tween(
+            begin: const Offset(0, 0.3),
+            end: const Offset(0, 0),
+          )),
+          child: child,
+        );
       },
     );
   }
